@@ -1,0 +1,42 @@
+{
+  "name": "ostatus",
+  "version": "0.0.1",
+  "description": "A JavaScript toolset for interacting with the OStatus suite of protocols (JS port of tootsuite/ostatus2)",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "flow check && babel src/ -d lib/",
+    "prepublish": "npm run build && npm run test",
+    "test": "jest",
+    "flow": "flow"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeroware/ostatus.git"
+  },
+  "keywords": [
+    "ostatus",
+    "salmon",
+    "gnusocial",
+    "mastodon",
+    "pubsubhubbub"
+  ],
+  "author": "Johan Schwartz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zeroware/ostatus/issues"
+  },
+  "homepage": "https://github.com/zeroware/ostatus#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.44.2",
+    "jest": "^19.0.2"
+  },
+  "dependencies": {
+    "node-forge": "^0.7.1",
+    "xmldom": "^0.1.27",
+    "xpath": "0.0.24"
+  }
+}
