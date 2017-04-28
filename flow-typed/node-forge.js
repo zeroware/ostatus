@@ -1,5 +1,5 @@
 declare type BigInteger = number;
-declare type PublicKey = { n: BigInteger, e: BigInteger };
+declare type PublicKey = { n: BigInteger, e: BigInteger, verify: Function };
 declare type PrivateKey = {
   n: BigInteger,
   e: BigInteger,
@@ -8,7 +8,8 @@ declare type PrivateKey = {
   q: any,
   dP: any,
   dQ: any,
-  qInv: any
+  qInv: any,
+  sign: Function
 };
 
 declare type Digest = {
