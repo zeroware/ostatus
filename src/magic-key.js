@@ -41,3 +41,8 @@ export function pemToMagicKey(pemString: string): string {
 
   return magicKeyArray.join(".");
 }
+
+export default {
+  magicKeyToPem,
+  pemToMagicKey
+};

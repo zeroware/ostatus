@@ -73,8 +73,10 @@ export default class Subscription {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded; charset=utf-8"
       }
-    }).then(function(response) {
-      return new SubscriptionResponse();
+    }).then(function(response: Response) {
+      return response.text().then(function(text: string) {
+        return new SubscriptionResponse(response.status, text);
+      });
     });
   }
 }
